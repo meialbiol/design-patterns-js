@@ -20,3 +20,17 @@ Object.defineProperty(task, 'toString', {
 
 console.log(Object.keys(task));
 console.log(task.toString());
+
+// Inheritance
+var urgentTask = Object.create(task);
+Object.defineProperty(urgentTask, 'toString', {
+    value: function () {
+        'use strict';
+        return this.title + ' is urgent';
+    },
+    writable: false,
+    enumerable: false,
+    configurable: false
+});
+
+console.log(urgentTask.toString());
