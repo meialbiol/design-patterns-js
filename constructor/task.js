@@ -14,4 +14,4 @@ Task.prototype.save = function () {
     console.log('saving Task: ' + this.name);
 };
 
-module.exports = Task;
+// module.exports = Task;
