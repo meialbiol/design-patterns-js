@@ -1,13 +1,12 @@
-var Repo = require('./taskRepository');
+var Repo = require('./taskRepository')();
+
 var Task = function (data) {
-    'use strict';
     this.name = data.name;
     this.completed = false;
 };
 
 Task.prototype.complete = function () {
-    'use strict';
-    console.log('completing Task: ' + this.name);
+    console.log('completing task: ' + this.name);
     this.completed = true;
 };
 

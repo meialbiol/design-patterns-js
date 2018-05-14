@@ -7,11 +7,11 @@ var repo = function () {
         return {
             name: 'Jon Mills'
         }
-    };
+    }
 
     var save = function (user) {
         console.log('Saving ' + user.name + ' to the db');
-    };
+    }
 
 
     return {
@@ -20,6 +20,6 @@ var repo = function () {
     }
 
 
-};
+}
 
-module.exports = repo();
+module.exports = repo;
