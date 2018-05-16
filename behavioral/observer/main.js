@@ -7,21 +7,21 @@ var notificationService = function () {
     }
 };
 var loggingService = function () {
-    var message = 'Logging '
+    var message = 'Logging ';
     this.update = function (task) {
         console.log(message + task.user + ' for task ' + task.name);
     }
-}
+};
 var auditingService = function () {
-    var message = 'Auditing '
+    var message = 'Auditing ';
     this.update = function (task) {
         console.log(message + task.user + ' for task ' + task.name);
     }
-}
+};
 
 function ObserverList() {
     this.observerList = [];
-};
+}
 
 ObserverList.prototype.add = function (obj) {
     return this.observerList.push(obj);
@@ -52,7 +52,7 @@ ObserverList.prototype.indexOf = function (obj, startIndex) {
     }
 
     return -1;
-}
+};
 var ObservableTask = function (data) {
     Task.call(this, data);
     this.observers = new ObserverList();
@@ -71,7 +71,7 @@ ObservableTask.prototype.notify = function (context) {
     for (var i = 0; i < observerCount; i++) {
         this.observers.get(i)(context);
     }
-}
+};
 
 ObservableTask.prototype.save = function () {
     this.notify(this);
@@ -87,9 +87,9 @@ var not = new notificationService();
 var ls = new loggingService();
 var audit = new auditingService();
 
-task1.addObserver(not.update());
-task1.addObserver(ls.update());
-task1.addObserver(audit.update());
+task1.addObserver(not.update);
+task1.addObserver(ls.update);
+task1.addObserver(audit.update);
 
 task1.save();
 
