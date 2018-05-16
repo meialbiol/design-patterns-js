@@ -13,3 +13,8 @@ Se hablan de los siguientes patrones:
 
 2. Estructurales
 * Decorator
+* Facade
+* Flyweight
+
+3. Behavioral
+* Observer
