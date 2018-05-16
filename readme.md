@@ -17,4 +17,5 @@ Se hablan de los siguientes patrones:
 * Flyweight
 
 3. Behavioral
-* Observer
+* Observer ( revisar código porque con node no funciona )
+* Mediator
