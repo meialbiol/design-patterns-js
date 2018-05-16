@@ -19,3 +19,4 @@ Se hablan de los siguientes patrones:
 3. Behavioral
 * Observer (revisar)
 * Mediator
+* Command
